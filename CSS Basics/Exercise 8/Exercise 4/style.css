@@ -1,0 +1,51 @@
+body{
+    background-color: #1a1a1a;
+    color: #b2b2b2;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+h1{
+    
+    font-weight: bold;
+    text-decoration: underline;
+    color: #02ff88;
+}
+
+caption{
+    color: #edbf06;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #02ff88;
+    background-color: #2c2c2c;
+}
+
+th, td {
+    border: 1px solid #4f4f4f;
+    padding: 10px 15px;
+}
+
+th {
+    background-color: #333333;
+    color: #02ff88;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2d2d2d;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #333333;
+}
+
+td:first-child {
+    color: orange;
+    font-weight: bold;
+}
+
+p{
+    font-style: italic;
+}

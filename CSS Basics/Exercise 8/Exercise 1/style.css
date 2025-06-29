@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(235, 235, 225);
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;  
+}
+
+h2 {
+    color: aqua;
+    border-bottom: 3px solid aqua; /* כתום לדוגמה */
+
+}
+
+.type1 {
+    color: green;
+}
+
+.type2 {
+    color: purple;
+}
