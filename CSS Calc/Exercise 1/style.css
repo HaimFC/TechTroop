@@ -1,0 +1,16 @@
+div.section1 {
+    background-color: #ffb6c1;
+    width: calc(100% - 20px);
+    height: 100px;
+}
+
+div.section2 {
+    background-color: #f08080;
+    width: 20px;
+    height: 100px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}

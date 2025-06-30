@@ -1,0 +1,14 @@
+div.container {
+    width: 40%;
+    display: flex;
+    outline: 2px solid #c71585;
+
+}
+
+
+div.section {
+    width: calc(100% / 3);
+    background-color: #ffb6c1;
+    height: 150px;
+    border: 2px solid black;
+}
