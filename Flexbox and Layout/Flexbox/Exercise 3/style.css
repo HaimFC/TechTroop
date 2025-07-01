@@ -1,0 +1,36 @@
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexbox_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+.left {
+  height: 100vh;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.right {
+  height: 100vh;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #3498db;
+}
+.lorem{
+    width: 70%;
+}
+

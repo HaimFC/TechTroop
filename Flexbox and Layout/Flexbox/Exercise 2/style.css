@@ -1,0 +1,28 @@
+.first-flexbox-container{
+    display: flex;
+    /* flex-grow is initialy 0 for all itmes in this container */
+}
+
+.second-flexbox-container{
+    display: flex;
+    flex-grow: 1;
+}
+
+.flexbox-item{
+    width: 100px;
+    height: 100px;
+    background-color: #6495ec;
+    border: white 2px solid;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+}
+
+.item2{
+    flex-grow: 1;
+}
+.item3{
+    flex-grow: 2;
+}
+.item4{
+    flex-grow: 2;
+}

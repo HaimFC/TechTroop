@@ -1,0 +1,54 @@
+.flexbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.sub-fb{
+    display: flex;
+    align-items: center;
+    width: 100%;   
+}
+.top{
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    border: 5px solid #f08080;
+    border-top: 2.5px solid #f08080;
+    justify-content: center;
+
+}
+.bottom{
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    border: 5px solid #f08080;
+    border-top: 2.5px solid #f08080;
+    justify-content: end;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #f08080;
+    margin: 10px;
+}
+
+.lorem{
+    text-align: center;
+    width: 80%;
+}
+
+.element{   
+    width: 100px;
+    height: 20px;
+    background-color: #f08080;
+    margin: 10px;
+}
+
+.elem1{
+    margin-right: auto;
+}
