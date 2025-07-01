@@ -1,0 +1,14 @@
+body{
+    background-color: blue;
+}
+
+#first{
+    background-color: red;
+}
+
+#second{
+    background-color: red;
+    width: 100%;
+    height: 25px;
+    
+}

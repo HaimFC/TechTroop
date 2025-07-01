@@ -9,12 +9,12 @@ h1 {
 
 h2 {
     color: aqua;
-    border-bottom: 3px solid aqua; /* כתום לדוגמה */
+    border-bottom: 3px solid aqua;
 
 }
 
 .type1 {
-    color: green;
+    color: rgb(22, 29, 22);
 }
 
 .type2 {
