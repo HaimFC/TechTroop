@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+/* good gor this specific website - shold not use general rule  */
+ul {
+    list-style: none;
+}
+
+/* good gor this specific website - shold not use general rule  */
+h3 {
+    color: #343a40;
+}
+
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 7%;
+    font-size: x-large;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    background: #677AE3;
+    background: linear-gradient(90deg, rgba(103, 122, 227, 1) 0%, rgba(110, 102, 199, 1) 50%, rgba(117, 78, 166, 1) 100%);
+}
+
+.mid-row {
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+}
+
+.content-block {
+    padding: 15px;
+    border: 2px solid #eff1f3;
+    border-radius: 5px;
+}
+
+/* Main content */
+
+.main-content {
+    width: 70%;
+    border-color: #eff1f3;
+    border-width: 2px;
+    border-left-style: solid;
+    border-right-style: solid;
+    padding: 15px;
+}
+
+
+.main-content .content-block {
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+
+.nav-bar {
+    background-color: #f8f9fa;
+    /* border-right: solid 2px #eff1f3; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 15%;
+    height: 100%;
+}
+
+.nav-bar li {
+    padding: 15px 0;
+    color: gray;
+}
+
+.nav-bar li:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Side Bar */
+
+.side-bar {
+    width: 15%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.side-bar .content-block {
+    background-color: white;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Footer */
+/* Footer should be sticky  */
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 13%;
+    background-color: #343a40;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;    
+    align-items: center;
+
+}
+
+.footer-content > span {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+}
+
+.tags-row {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    color: #a1aab2;
+}
