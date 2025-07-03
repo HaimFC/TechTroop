@@ -1,0 +1,22 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media(max-width:768px){
+    .box{
+        height: 20px;
+        width: 100%;
+        background-color: red;
+    }
+}
+
+@media(min-width:768px){
+    .box{
+            height: 20px;
+            width: 300px;
+            background-color: blue;
+
+    }
