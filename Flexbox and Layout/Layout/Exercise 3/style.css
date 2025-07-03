@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #677ce6, #6f64c4, #7453ac);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+label{
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    margin-bottom: 3px;
+}
+
+input ,select , button, textarea{
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #e1e5e9;
+}
+
+select{
+    font-size: 12px;
+}
+
+.main-fb{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+}
+
+.main-fb > .row1 > .col1 > h1{
+    font-family: Arial, sans-serif;  
+    font-size: 24px;                  
+    font-weight: 900;
+}
+
+.main-fb > .row1 > .col1 > p{
+    font-size: 10px;
+}
+
+.col1 ,.col2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+}
+
+.row1 ,.row2, .row3 ,.row4, .row5 ,.row6 ,.row7 {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content:space-between;
+    margin-bottom: 5px;
+}
+
+.row1 > .col1 {
+    align-items: center;
+}
+
+.row7 > .save-draft {
+    background-color: #f8f9fa;
+    color: #6a6a6a;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+.row7 > .send-msg {
+    background: linear-gradient(to right, #44b5fd, #1dd9fd, #06e7fd);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.row7 > .send-msg:hover , .save-draft:hover {
+    cursor: pointer;
+}
+
+.s-row1{
+    margin-bottom: 10px;
+}
+
+.s-row2 {
+    display: flex;
+    align-items:start;
+}
+
+.s-row2 label {
+    margin-right: 20px;
+}

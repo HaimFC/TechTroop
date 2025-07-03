@@ -7,6 +7,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class = "main-fb">
+        <div class = "row1">
+            <div class = "col1">
+                <h1>Contact Form</h1>
+                <p>Get in touch with us</p>
+            </div>
+        </div>  
+        <div class = "row2">
+            <div class = "col1">
+                <label for="firstname">First Name</label>
+                <input type="firstname">
+                
+            </div>
+            <div class = "col2">
+                <label for="lastname">Last Name</label>
+                <input type="lastname">
+            </div>
+        </div>
+        <div class = "row3">
+            <div class="col1">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+            </div>
+        </div>
+        <div class = "row4">
+            <div class = "col1">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="">Select a topic</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing & Payments</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="product">Product Inquiry</option>
+                    <option value="partnership">Partnership Opportunities</option>
+                    <option value="careers">Careers / Job Applications</option>
+                    <option value="media">Press / Media</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </div>
+            <div class = "col2">
+                <label for="">Priority</label>
+                <select id="priority" name="priority">
+                    <option value="home">Low</option>
+                    <option value="products">Medium</option>
+                    <option value="services">High</option>
+                </select>
+            </div>
+        </div>
+        <div class = "row5">
+            <div class = "col1">
+                <label for="Message">Message</label>
+                <textarea id="Message" name="Message" placeholder="Tell us how we can help..."></textarea>
+            </div>
+        </div>
+        <div class = "row6">
+            <div class = "col1">
+                <div class = "s-row1">
+                    <label for="">Contact Preferences</label>  
+                </div>
+                <div class = "s-row2">
+                    <input type="checkbox" id="emailUpdates" name="emailUpdates">
+                    <label for="emailUpdates">Email Updates</label>
+                    <input type="checkbox" id="phoneUpdates" name="phoneUpdates">
+                    <label for="phoneUpdates">Phone Follow-up</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Newsletter</label>
+                </div>
+            </div>
+        </div>
+        <div class = "row7">
+                <button class = "save-draft" type="button">Save Draft</button>
+                <button class = "send-msg" type="reset">Send Message</button>
+        </div>
+    </div>
 </body>
 </html>
