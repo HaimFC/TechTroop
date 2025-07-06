@@ -28,7 +28,7 @@
                     <p class = "intro-par">I create beautiful and functional web experiences using modern
                         technologies. Passionate about clean code and user-centered
                         design.</p>
-                    <button>Get In Touch</button>
+                    <a href="#Contact"><button>Get In Touch</button></a>
                 </div>
                 <div class = "right-col">
                     <div class = "img-cont">
@@ -46,9 +46,34 @@
                         technologies, reading design blogs, or enjoying a good cup of coffee while sketching out
                         new project ideas.</p>
                 </div>
-                <div class = "right-col">
+                <div class="right-col">
                     <h3>Skills</h3>
-                    <p></p>
+                    <div class="skills">
+                        <div class="skill-row">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress python"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress js"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span>C/C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress c"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <span>Erlang</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress erlang"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -94,17 +119,31 @@
                         <input type="email">
 
                         <label for="">Message</label>
-                        <input type="text">
+                        <textarea id="message" name="message"></textarea>
+
 
                         <button type="submit">Send Message</button>
                     </div>
                     <div class = "right-col">
                         <h3>Contact Information</h3>
                         <!-- remember to add icons -->
-                        <p>haimfellner1@gmail.com</p>
-                        <p>+972 (054) 831-0993</p>
-                        <p>Beer Sheva, Israel</p>
-                        
+                        <div class="link email">
+                        <a href="mailto:haimfellner1@gmail.com">
+                            <p>📧 haimfellner1@gmail.com</p>
+                        </a>
+                        </div>
+
+                        <div class="link phone">
+                        <a href="tel:+972548310993">
+                            <p>📞 +972 (054) 831-0993</p>
+                        </a>
+                        </div>
+
+                        <div class="link map">
+                        <a href="https://www.google.com/maps/place/Beer+Sheva,+Israel" target="_blank">
+                            <p>📍 Beer Sheva, Israel</p>
+                        </a>
+                        </div>
                         <div class="net-icon linkedin">
                             <a href=""><img src="" alt=""></a>
                         </div>
