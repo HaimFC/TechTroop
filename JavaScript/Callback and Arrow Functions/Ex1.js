@@ -12,3 +12,4 @@ const pushPull = function(callback){
 }
 pushPull(push) //should print "pushing it!"
 pushPull(pull) //should print "pulling it!"
+
