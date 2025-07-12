@@ -1,0 +1,155 @@
+1.What will console log?
+2.Will there be an error?
+3.Why?
+4.Will something be undefined?
+5.Why?
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+
+
+==============Ex1:===============
+
+1. What will console log?
+
+running
+running
+running
+running
+running
+running
+running
+running
+Finished running 8 miles
+
+2. Will there be an error?
+Yes
+
+3. Why?
+Using distance outside of the if block
+
+4. Will something be undefined?
+No
+
+5. Why?
+let is not initialize as undefined
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+run -> global
+distance -> local (if block)
+i -> local (if block)
+
+==============Ex2:===============
+
+1. What will console log?
+
+
+2. Will there be an error?
+Yes
+
+3. Why?
+Using cowSound outside of the if block
+
+4. Will something be undefined?
+No
+
+5. Why?
+let is not initialize as undefined
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+cowSound ->  local (if block)
+
+
+==============Ex3:===============
+
+1. What will console log?
+Served a special fish
+Served a special lettuce plate
+Served a special curious cheese
+Finished serving all the orders: fish,lettuce plate,curious cheese
+
+2. Will there be an error?
+No
+
+3. Why?
+no uses of variables outside of them scopes
+
+4. Will something be undefined?
+No
+
+5. Why?
+no uses of variables outside of them scopes
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+order ->  local (if block)
+orders -> local (function block)
+specialOrder  -> local (if block)
+allOrders -> global
+
+==============Ex4:===============
+
+1. What will console log?
+
+2. Will there be an error?
+Yes
+
+3. Why?
+Using seed outside of its function block
+
+4. Will something be undefined?
+No
+
+5. Why?
+const is not initialize as undefined
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+pot ->  global
+seed -> local (function block)
+getSeed  -> global
+plant -> global
+
+==============Ex5:===============
+
+1. What will console log?
+
+2. Will there be an error?
+Yes
+
+3. Why?
+Trying to return const that initialized inside if block
+
+4. Will something be undefined?
+No
+
+5. Why?
+const is not initialize as undefined
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+doesUserExist ->  global
+users -> doesUserExist block unction
+u  -> inside for block
+name -> doesUserExist block unction
+found -> inside if block
+userExists -> global
+
+==============Ex6:===============
+
+1. What will console log?
+
+2. Will there be an error?
+Yes
+
+3. Why?
+Trying to assign constant variable
+
+4. Will something be undefined?
+No
+
+5. Why?
+const is not initialize as undefined
+
+6.To what scope does each variable belong? Global or local? If local, to which specifically?
+isEnough ->  global
+makeEnough -> global
+i  -> inside function block
+
+
+
