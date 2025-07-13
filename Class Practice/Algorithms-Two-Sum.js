@@ -51,8 +51,8 @@ const twoSumEvenBetter = function(arr, target) {
     const seen = new Set(); 
 
     for (let num of arr) { //O(n)
-        let complement = target - num;
-        if (seen.has(complement)) {
+        let comp = target - num;
+        if (seen.has(comp)) {
             return true;
         }
         seen.add(num);

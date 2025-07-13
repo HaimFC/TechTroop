@@ -10,6 +10,9 @@ const findDups = function(arr){
     }
 }
 
+//findDups([1,2,3,4,45,6,6,7,8,9,1,2,3]);
+
+
 // Create a function that get an array and print its duplicates - O(nlogn+n)
 
 const findDupsBetter = function(arr) {
@@ -21,5 +24,21 @@ const findDupsBetter = function(arr) {
     }
 }
 
-//findDups([1,2,3,4,45,6,6,7,8,9,1,2,3]);
-findDupsBetter([1,2,3,4,45,6,6,7,8,9,1,2,3]);
+//findDupsBetter([1,2,3,4,45,6,6,7,8,9,1,2,3]);
+
+
+// Create a function that get an array and print its duplicates - O(n) using Hash (Map)
+
+const findDupsEvenBetter = function(arr) {
+    const seen = new Set();
+
+    arr.forEach(element => {
+        if(seen.has(element)){
+            console.log(element);
+        }
+        seen.add(element);
+    });
+}
+
+
+findDupsEvenBetter([1,2,3,4,45,6,6,7,8,9,1,2,3]);
