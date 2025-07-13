@@ -27,7 +27,7 @@ const findDupsBetter = function(arr) {
 //findDupsBetter([1,2,3,4,45,6,6,7,8,9,1,2,3]);
 
 
-// Create a function that get an array and print its duplicates - O(n) using Hash (Map)
+// Create a function that get an array and print its duplicates - O(n) using Hash (Set)
 
 const findDupsEvenBetter = function(arr) {
     const seen = new Set();
