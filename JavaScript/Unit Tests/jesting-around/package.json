@@ -1,0 +1,14 @@
+{
+  "name": "jesting-around",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
