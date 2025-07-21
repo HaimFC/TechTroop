@@ -1,5 +1,5 @@
 const readline = require('readline');
-const Trie = require('./trieClass'); // Assuming your trie class is in a file named trieClass.js
+const Trie = require('./trieClass'); 
 
 function mainFunction() {
     console.log("=== AutoComplete Trie Console ===");
@@ -49,6 +49,15 @@ function handleCommand() {
                         console.log(`Suggestions for "${word}": ${suggestions.join(', ')}`);
                     } else {
                         console.log(`No completions found for "${word}".`);
+                    }
+                    break;
+
+                case 'use':
+                    if (!trieWords.findWord(word)) {
+                        console.log(`✗ "${word}" not found in the dictionary.`);
+                    } else {
+                        const freq = trieWords.useWord(word);
+                        console.log(`✓ Incremented usage for "${word}" (now ${freq})`);
                     }
                     break;
 

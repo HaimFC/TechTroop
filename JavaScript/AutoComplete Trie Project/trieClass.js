@@ -1,38 +1,44 @@
-class Trie{
-
-    constructor(value = ""){
-        this.value = value; //Character stored in this node
-        this.children = {}; //Object containing child nodes
-        this.endOfWord = false; //Boolean flag marking complete words
+class Trie {
+    constructor(value = "") {
+        this.value = value;
+        this.children = {};
+        this.endOfWord = false;
+        this.frequency = 0; //extension
     }
 
-    addWord(word){
-        const letter = word.slice(0,1);
-        if(word==="")
+    addWord(word) {
+        if (word === "") {
             this.endOfWord = true;
-        else{
-            if(!this.children[letter])
-            {
-                this.children[letter] = new Trie(letter);
-                this.children[letter].addWord(word.slice(1));
-            }
-            else{
-                this.children[letter].addWord(word.slice(1));
-            }
+            return;
         }
+
+        const letter = word[0];
+        if (!this.children[letter]) {
+            this.children[letter] = new Trie(letter);
+        }
+        this.children[letter].addWord(word.slice(1));
     }
 
-    findWord(word){
-        if(word === "" && this.endOfWord === true){
-            return true;
-        }
-        if(this.children[word.slice(0,1)]){
-            return(this.children[word.slice(0,1)].findWord(word.slice(1)));
-        }
-        else{
-            return false;
-        }
+    findNode(word) {
+        if (word === "") return this;
+        const letter = word[0];
+        if (!this.children[letter]) return null;
+        return this.children[letter].findNode(word.slice(1));
+    }
 
+    findWord(word) {
+        const node = this.findNode(word);
+        return node !== null && node.endOfWord === true;
+    }
+
+    useWord(word) {
+        const node = this.findNode(word);
+        if (node && node.endOfWord) {
+            node.frequency++;
+            return node.frequency;
+        } else {
+            throw new Error(`"${word}" does not exist in dictionary`);
+        }
     }
 
     predictWords(prefix) {
@@ -40,58 +46,35 @@ class Trie{
 
         const firstChar = prefix.charAt(0);
         const childNode = this.children[firstChar];
-
-        if (!childNode) return allWords;
+        if (!childNode) return [];
 
         const lastNode = this._getRemainingTree(prefix.slice(1), childNode);
+        if (!lastNode) return [];
 
-        if (lastNode) {
-            this._allWordsHelper("", lastNode, allWords, prefix.slice(0,-1));
-        }
+        this._collectWords(prefix.slice(0, -1), lastNode, allWords, "");
 
-        return allWords;
+        return allWords
+            .sort((a, b) => b.freq - a.freq)
+            .map(entry => `${entry.word} (${entry.freq})`);
     }
 
     _getRemainingTree(prefix, node) {
-        if (prefix === "") {
-            return node;
-        }
-
-        const firstChar = prefix.charAt(0);
-        const childNode = node.children[firstChar];
-
-        if (childNode) {
-            return this._getRemainingTree(prefix.slice(1), childNode);
-        } else {
-            return null; // consider throw an error
-        }
+        if (prefix === "") return node;
+        const firstChar = prefix[0];
+        if (!node.children[firstChar]) return null;
+        return this._getRemainingTree(prefix.slice(1), node.children[firstChar]);
     }
 
-    _allWordsHelper(prefix, node, allWords = [], currentWord = "") {
-        if (node.value !== undefined) {
-            currentWord += node.value;
+    _collectWords(base, node, result, current = "") {
+        current += node.value;
+        if (node.endOfWord) {
+            result.push({ word: base + current, freq: node.frequency });
         }
 
-        if (prefix.length === 0) {
-            if (node.endOfWord) {
-                allWords.push(currentWord);
-            }
-
-            for (let key in node.children) {
-                this._allWordsHelper("", node.children[key], allWords, currentWord);
-            }
-
-            return allWords;
-        }
-
-        const firstChar = prefix[0];
-        if (node.children[firstChar]) {
-            return this._allWordsHelper(prefix.slice(1), node.children[firstChar], allWords, currentWord);
-        } else {
-            return allWords;
+        for (let key in node.children) {
+            this._collectWords(base, node.children[key], result, current);
         }
     }
 }
+
 module.exports = Trie;
-
-

@@ -23,7 +23,7 @@ describe('Trie', () => {
         trie.addWord('cart');
         trie.addWord('dog');
         const completions = trie.predictWords('ca');
-        expect(completions).toEqual(expect.arrayContaining(['car', 'cat', 'cart']));
+        expect(completions).toEqual(expect.arrayContaining(['car (0)', 'cat (0)', 'cart (0)']));
         expect(completions).not.toContain('dog');
     });
 
@@ -39,6 +39,13 @@ describe('Trie', () => {
         expect(trie.findWord('hi')).toBe(true);
         expect(trie.findWord('hit')).toBe(true);
         expect(trie.findWord('h')).toBe(false);
+    });
+
+    test('should increment usage count with useWord', () => {
+        trie.addWord('cat');
+        expect(trie.useWord('cat')).toBe(1);
+        expect(trie.useWord('cat')).toBe(2);
+        expect(() => trie.useWord('dog')).toThrow();
     });
 
     test('should handle empty trie predictions', () => {
