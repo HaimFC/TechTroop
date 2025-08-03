@@ -1,0 +1,22 @@
+
+const fetch = function (){
+  const type = document.getElementById("type").value;
+  const value = document.getElementById("value").value;
+  $.ajax({
+    method: "GET",
+    url: `https://www.googleapis.com/books/v1/volumes?q=${type}:${value}`,
+    success: function (data) {
+      console.log(data)
+      data.items.forEach(element => {
+        const header = document.createElement("h5")
+        header.innerHTML = `${value} - ${element.volumeInfo.title} by ${element.volumeInfo.authors[0]}`
+        header.style.fontFamily = "Helvetica"
+        document.body.appendChild(header)
+      });
+      
+    },
+    error: function (xhr, text, error) {
+        console.log(text);
+    }
+}); 
+}
