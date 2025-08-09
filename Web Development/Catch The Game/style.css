@@ -1,0 +1,74 @@
+:root{
+  --hud-h: 56px;
+  --hud-bg: #ffffffd9;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Arial, sans-serif; }
+
+#hud {
+  position: fixed; z-index: 10; inset: 0 0 auto 0; height: var(--hud-h);
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 12px; background: var(--hud-bg); backdrop-filter: blur(6px);
+  border-bottom: 1px solid #d7d7d7;
+}
+#start-btn {
+  padding: 8px 14px; border-radius: 10px; border: 1px solid #cfcfcf;
+  background: #f4f4f4; cursor: pointer; font-weight: 600;
+  transition: transform .06s ease;
+}
+#start-btn:active { transform: scale(0.98); }
+#hud .stats { display: flex; gap: 16px; font-weight: 600; }
+#level, #timer, #left { color: #1b3a57; }
+
+#timer.flash-yellow { animation: flashYellow 600ms ease; }
+@keyframes flashYellow {
+  0% { background: transparent; }
+  20% { background: #fff2a8; }
+  100% { background: transparent; }
+}
+
+#timer.urgent { animation: pulseRed 700ms ease-in-out infinite; }
+@keyframes pulseRed {
+  0%   { color: #b00020; transform: none; }
+  50%  { color: #ff0033; transform: scale(1.08); }
+  100% { color: #b00020; transform: none; }
+}
+
+#game-area {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--hud-h));
+  top: var(--hud-h);
+  background: #e8f3ff;
+  overflow: hidden;
+}
+
+.frog {
+  position: absolute;
+  line-height: 1;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 80ms ease;
+}
+.frog:hover { transform: translateZ(0) scale(1.08); }
+.frog:active { transform: translateZ(0) scale(0.95); }
+.frog > i { display: block; } /* שיהיה box גם אם הפונט נטען באיחור */
+
+#center-message {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  z-index: 20; pointer-events: none;
+}
+#center-message::before {
+  content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.25);
+}
+#center-message .panel {
+  position: relative; pointer-events: auto;
+  background: #fff; border: 1px solid #ddd; border-radius: 14px;
+  padding: 18px 22px; box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  font-weight: 700; font-size: 18px; color: #222;
+}
+.hidden { display: none; }
